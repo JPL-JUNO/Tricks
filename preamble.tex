@@ -6,7 +6,7 @@
 
 \usepackage{tcolorbox}
 \tcbuselibrary{minted, skins}
-\newtcblisting[auto counter=chapter]{py}{listing engine=minted,
+\newtcblisting[auto counter=chapter]{py}[1]{listing engine=minted,
 				minted style=colorful,
 				minted language=python,
 				minted options={fontsize=\small,
@@ -14,9 +14,9 @@
 							  autogobble,
 							  numbersep=3mm,
 							  linenos},
-				title={Recipes \thetcbcounter},
-				colback=blue!5!white,
-				colframe=blue!75!black,
+				title={Recipes~\thetcbcounter ~#1},
+				colback=red!5!white,
+				colframe=blue!75!white,
 				listing only,
 				left=5mm,
 				enhanced,
