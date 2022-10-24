@@ -1,0 +1,18 @@
+\chapter{\texttt{Series}}
+
+\chapter{\texttt{DataFrame}}
+
+\begin{py}{删选DataFrame的字段}
+df = pd.DataFrame(
+    {
+        'A': list('abcdefgh'),
+        'B': range(8),
+        'C': range(8, 0, -1),
+        'D': np.random.normal(size=8),
+        'E': np.random.normal(size=8),
+        'F': np.random.normal(size=8),
+    }
+)
+df.loc[:, ~df.columns.isin(['B', 'C'])]
+df.filter(items=df.columns.difference(['B', 'C']))
+\end{py}
