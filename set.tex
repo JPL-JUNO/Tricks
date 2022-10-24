@@ -1,0 +1,25 @@
+\chapter{Attributes}
+\chapter{Methods}
+判断集合是否是另一个集合的子集
+\begin{py}{集合方法}
+a = [1, 2, 3, 4]
+b = set([1, 2])
+b.issubset(a)
+
+a = ['a', 'b', 'c', 'd']
+b = set([1, 23])
+b.issubset(a)
+
+a = ['a', 'b', 'c', 'd']
+b = set(list('abcd'))
+b.issubset(a)
+\end{py}
+
+\begin{py}{逻辑运算符}
+set(list('abd')) < set(list('abcd'))
+set(list('abcd')) < set(list('abcd'))
+set(list('abcd')) <= set(list('abcd'))
+\end{py}
+
+
+
